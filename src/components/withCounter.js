@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-const withCounter = (OriginalCounter) => {
+const withCounter = (OriginalCounter, incrementNumber) => {
   class newCounter extends Component {
     constructor(props) {
       super(props)
@@ -9,15 +9,18 @@ const withCounter = (OriginalCounter) => {
         count: 5,
       }
     }
-
     increment = () => {
       this.setState((preState) => {
-        return { count: preState.count + 1 }
+        return { count: preState.count + incrementNumber }
       })
     }
     render() {
       return (
-        <OriginalCounter count={this.state.count} increment={this.increment} />
+        <OriginalCounter
+          count={this.state.count}
+          increment={this.increment}
+          {...this.props}
+        />
       )
     }
   }

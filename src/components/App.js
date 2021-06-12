@@ -7,7 +7,7 @@ export default class App extends Component {
     return (
       <div>
         <MouseOver />
-        <Hover />
+        <Hover name="Foysal" />
       </div>
     )
   }

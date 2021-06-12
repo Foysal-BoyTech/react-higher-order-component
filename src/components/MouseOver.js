@@ -8,4 +8,4 @@ class MouseOver extends Component {
   }
 }
 
-export default withCounter(MouseOver)
+export default withCounter(MouseOver, 5)
