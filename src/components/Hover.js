@@ -1,26 +1,11 @@
 import React, { Component } from 'react'
+import withCounter from './withCounter'
 
-export default class Hover extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      count: 5,
-    }
-  }
-
-  increment = () => {
-    this.setState((preState) => {
-      return { count: preState.count + 1 }
-    })
-  }
-
+class Hover extends Component {
   render() {
-    const { count } = this.state
-    return (
-      <div>
-        <h1 onClick={this.increment}>Please click {count}</h1>
-      </div>
-    )
+    const { count, increment } = this.props
+    return <h1 onClick={increment}>Please click {count}</h1>
   }
 }
+
+export default withCounter(Hover)

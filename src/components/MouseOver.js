@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
+import withCounter from './withCounter'
 
-export default class MouseOver extends Component {
+class MouseOver extends Component {
   render() {
-    const { count } = this.state
-    return (
-      <div>
-        <button onMouseOver={this.decrement}>Please click{count}</button>
-      </div>
-    )
+    const { count, increment } = this.props
+    return <button onMouseOver={increment}>Please click{count}</button>
   }
 }
+
+export default withCounter(MouseOver)
