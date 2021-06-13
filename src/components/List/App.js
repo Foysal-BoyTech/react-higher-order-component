@@ -12,9 +12,9 @@ export default function App() {
 
   return (
     <div>
-      {persons.map((person) => (
-        <Names person={person} key={person.id} />
-      ))}
+      {persons.map((person) =>
+        person.age > 30 ? <Names person={person} key={person.id} /> : 'X',
+      )}
     </div>
   )
 }
