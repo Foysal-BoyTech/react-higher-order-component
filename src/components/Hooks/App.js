@@ -1,6 +1,6 @@
 import React from 'react'
-import State from './State'
+import HookCounterTwo from './HookCounterTwo'
 
 export default function App() {
-  return <State />
+  return <HookCounterTwo />
 }

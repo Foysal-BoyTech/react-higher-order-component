@@ -1,10 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export default function State() {
-  const [count, setCount] = useState(10)
-  const increment = () => {
-    setCount(count + 1)
-  }
+  const names = [{ id: 1, name: 'foysal', skill: ['git', 'react', 'gitbash'] }]
 
-  return <button onClick={increment}>{count}</button>
+  return (
+    <div>
+      {names.map((el) =>
+        el.skill.map((skill, index) => (
+          <h1 key={index}>
+            {skill} <br />
+            {index}
+          </h1>
+        )),
+      )}
+    </div>
+  )
 }
