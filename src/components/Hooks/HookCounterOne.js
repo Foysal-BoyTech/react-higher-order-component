@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react'
+import HookCounterTwo from './HookCounterTwo'
 
 export default function HookCounterOne() {
   const [name, setName] = useState({ firstName: '', lastName: '' })
   const [count, setCount] = useState(0)
+  const [display, setDisplay] = useState(true)
 
   useEffect(() => {
-    document.title = `You clicked ${count} times`
-  }, [count])
+    document.title = `you click ${count} times`
+
+    return () => {}
+  })
 
   return (
     <div>
@@ -31,6 +35,10 @@ export default function HookCounterOne() {
       <h3>{JSON.stringify(name)}</h3>
       <h1>{count}</h1>
       <button onClick={() => setCount((pre) => pre + 1)}>count</button>
+      <div>
+        <button onClick={() => setDisplay(!display)}>Add </button>
+        {display}
+      </div>
     </div>
   )
 }
