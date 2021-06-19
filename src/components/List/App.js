@@ -13,7 +13,11 @@ export default function App() {
   return (
     <div>
       {persons.map((person) =>
-        person.age > 30 ? <Names person={person} key={person.id} /> : 'X',
+        person.age > 30 ? (
+          <Names person={person} key={person.id} show={false} />
+        ) : (
+          'X'
+        ),
       )}
     </div>
   )

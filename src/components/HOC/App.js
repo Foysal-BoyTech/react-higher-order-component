@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Hover from './Hover'
-import MouseOver from './MouseOver'
+import Hover from '../Hover'
+import MouseOver from '../MouseOver'
 
 export default class App extends Component {
   render() {

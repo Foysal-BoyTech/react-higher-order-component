@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Counter from './Counter'
+import Counter from './ClassCounter'
 
 export default class App extends Component {
   render() {
-    return <Counter counts={false} />
+    return <Counter counts={true} />
   }
 }

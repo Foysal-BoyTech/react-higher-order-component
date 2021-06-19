@@ -1,0 +1,13 @@
+.count {
+  font-weight: 800;
+  color: royalblue;
+}
+
+.main {
+  font-size: large;
+  font-style: oblique;
+  padding-left: 40%;
+  padding-top: 10%;
+  height: 20px;
+  width: 100px;
+}
