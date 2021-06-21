@@ -1,7 +1,6 @@
 import React, { useReducer } from 'react'
 const initialVal = 0
 const reducer = (state, action) => {
-  // eslint-disable-next-line default-case
   switch (action) {
     case 'increment':
       return state + 1

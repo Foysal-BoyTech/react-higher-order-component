@@ -1,17 +1,22 @@
-import React from 'react'
-import ComponentC from '../context/ComponentC'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import DataFetching2 from './DataFetching2'
+import ParentComponent from './ParentComponent'
 
-export const UserContext = React.createContext()
-export const ChannelContext = React.createContext()
+//import ComponentC from '../context/ComponentC'
+
+// export const UserContext = React.createContext()
+// export const ChannelContext = React.createContext()
 
 export default function App() {
   return (
     <div>
-      <UserContext.Provider value={'Foysal'}>
+      {/* <UserContext.Provider value={'Foysal'}>
         <ChannelContext.Provider value={'Alauddin'}>
           <ComponentC />
         </ChannelContext.Provider>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
+      <ParentComponent />
     </div>
   )
 }
