@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react'
 import axios from 'axios'
 import DataFetching2 from './DataFetching2'
 import ParentComponent from './ParentComponent'
+import Props from './Props'
 
 //import ComponentC from '../context/ComponentC'
 
@@ -32,12 +33,14 @@ export default function App() {
           <ComponentC />
         </ChannelContext.Provider>
       </UserContext.Provider> */}
-      <div>
+      {/* <div>
         <button onClick={increment1}>count1 - {count1} </button>
         <span>{isEven ? 'Even' : 'Odd'}</span>
       </div>
       <button onClick={increment2}>count2 - {count2} </button>
-      <ParentComponent />
+      <ParentComponent /> */}
+      <Props />
+
     </div>
   )
 }
